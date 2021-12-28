@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NIKE TV</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/nike_logo1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+  
+    <div class="obroba">
+        <div class="tv">
+            <div class="screen">
+                <div id="anim1">
+                </div>
+              </div>
+            <input type="checkbox" checked="true" id="moznost1" onclick="toggleImage(); toggleSvg(); toggleBezier();">
+                <input type="button" id="powerbtn" onclick="toggleImage1(); playaudioone.play(); toggleSvg(); toggleImage(); toggleBezier(); toggleonoff()">
+                <img id="powerbutton1" src="images/onoff.png" />
+            <div class="zvocnik">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="reza"></div>
+            <p class="nikenapis">NIKE TV</p>
+            <div class="antena">
+               <div class="a"></div>
+               <div class="a"></div>
+            </div>
+            <div class="stojalo1"></div>
+            <div class="stojalo2"></div>
+        </div>
+    <div class="daljinec"> 
+		<input type="button" id="zapri" onclick="toggleImage1(); playaudioone.play(); toggleSvg(); toggleImage(); toggleBezier(); toggleonoff()" >
+		 <img id="powerbutton" src="images/onoff.png" />
+
+        <input type="button" id="gumb1" onclick="toggleVisibility('nikelogo'); hideImage2(); playaudiotwo.play();" >
+		<label for="gumb1" id="pngslika">PNG</label>  
+        <img id="nikelogo" src="images/nike_logo1.png"  style="visibility:hidden" ></img>
+
+        <input type="button" id="gumb2"  onclick="toggleVisibility('svgslika1'); hideImage1(); playaudiotwo.play();" >
+        <label for="gumb2" id="svgslika" >SVG</label>  
+        <svg id="svgslika1"  style="visibility:hidden"  version="1.0" xmlns="http://www.w3.org/2000/svg"
+             width="494.000000pt"  height="505.000000pt" viewBox="0 0 494.000000 505.000000"
+            preserveAspectRatio="xMidYMid meet">
+
+            <g transform="translate(0.000000,505.000000) scale(0.100000,-0.100000)"
+            fill="white" stroke="none">
+            <path d="M735 3238 c-248 -263 -478 -638 -540 -883 -35 -137 -20 -296 37 -409
+            34 -66 115 -143 189 -180 109 -55 196 -70 363 -63 234 9 416 61 781 222 116
+            51 498 219 850 375 1598 706 2272 1003 2294 1011 89 34 -86 -11 -859 -222
+            -1904 -521 -2384 -650 -2478 -670 -61 -13 -136 -21 -202 -22 -180 -1 -301 43
+            -394 144 -77 83 -101 160 -93 303 6 120 36 230 102 377 25 56 44 103 42 106
+            -3 2 -44 -38 -92 -89z"/>
+            </g>
+        </svg>
+
+        <input type="button" id="gumb3" onclick="toggleVisibility('BezierCurveCanvas'); hideImage3(); playaudiotwo.play();">
+        <label for="gumb3" id="bezierslika" >BEZIER</label> 
+        <canvas id="BezierCurveCanvas" width="2000" height="700" style="visibility:hidden"></canvas>
+        <script>
+          var c = document.getElementById("BezierCurveCanvas");
+          var context = c.getContext("2d");
+        context.beginPath();
+        context.moveTo(353, 393);
+        context.bezierCurveTo(586, 436, 1044, 198, 1905, 18);
+        context.bezierCurveTo(617, 530, 348, 777, 114, 644);
+        context.bezierCurveTo(-126, 464, 183, 123, 290, 8);
+        context.bezierCurveTo(181, 197, 202, 359, 353, 393);
+        context.fillStyle = "#FF2400";
+        context.strokeStyle = "#FF2400";
+        context.stroke();
+        context.fill();
+        </script>    
+      </div> 
+      <input type="button" id="credit_btn" onclick="creditsBy(); playaudiothree.play();">
+      <img src="images/exclamation_mark.png" id="ex_mark">
+      
+      
+    </div>
+
+   
+</body>
+</html>
