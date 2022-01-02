@@ -2,22 +2,26 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NIKE TV</title>
 
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="icon" type="image/png" href="images/nike_logo1.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
    
 
 </head>
 <body>
-  
+    <div class="cursor"></div>
     <div class="obroba">
         <div class="tv">
             <div class="screen">
                 <div id="anim1">
                 </div>
               </div>
+              
             <input type="checkbox" checked="true" id="moznost1" onclick="toggleImage(); toggleSvg(); toggleBezier();">
                 <input type="button" id="powerbtn" onclick="toggleImage1(); playaudioone.play(); toggleSvg(); toggleImage(); toggleBezier(); toggleonoff()">
                 <img id="powerbutton1" src="images/onoff.png" />
@@ -64,7 +68,8 @@
         <input type="button" id="gumb3" onclick="toggleVisibility('BezierCurveCanvas'); hideImage3(); playaudiotwo.play();">
         <label for="gumb3" id="bezierslika" >BEZIER</label> 
         <canvas id="BezierCurveCanvas" width="2000" height="700" style="visibility:hidden"></canvas>
-   
+
+        <input type="color" class="colorPicker" id="colorpicker" value="#000000">
       </div> 
       <input type="button" id="credit_btn" onclick="creditsBy(); playaudiothree.play();">
       <img src="images/exclamation_mark.png" id="ex_mark">

@@ -1,4 +1,17 @@
-   function toggleImage1(){
+const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+})
+
+document.addEventListener('click', () => {
+    cursor.classList.add("expand");
+
+    setTimeout(() => {
+        cursor.classList.remove("expand");
+    }, 500)
+})
+
+    function toggleImage1(){
   document.getElementById('moznost1').checked=!document.getElementById('moznost1').checked
   }
   
@@ -9,7 +22,7 @@
             title: "WARNING!", 
             html: "Open the TV first", 
             confirmButtonColor: '#A2C4E0', 
-            confirmButtonText: "OK",      
+            confirmButtonText: "OK", 
           });
     }
     else{
@@ -53,7 +66,16 @@ function toggleImage(){
 
  function toggleBezier(){
     var el = document.getElementById('BezierCurveCanvas');
-
+    var context = el.getContext("2d");
+    context.moveTo(353, 393);
+    context.bezierCurveTo(586, 436, 1044, 198, 1905, 18);
+    context.bezierCurveTo(617, 530, 348, 777, 114, 644);
+    context.bezierCurveTo(-126, 464, 183, 123, 290, 8);
+    context.bezierCurveTo(181, 197, 202, 359, 353, 393);
+    context.lineTo(353, 393);
+    context.fill();  
+    context.stroke();
+    
     if(document.getElementById('moznost1').checked)
         el.style.visibility="hidden";
 
@@ -63,6 +85,7 @@ function toggleImage(){
     else if(document.getElementById('powerbtn').clicked)
         el.style.visibility="hidden";
  }
+
  function hideImage1(){
 
     var el = document.getElementById('nikelogo');
@@ -148,15 +171,23 @@ function animationOff(){
      document.getElementById('moznost1').classList.add('backgroundOn');
     }, 700);}
 
-var c = document.getElementById("BezierCurveCanvas");
-          var context = c.getContext("2d");
-        context.beginPath();
+
+   
+    let colorInput = document.getElementById('colorpicker');
+    let colorValue = colorInput.value;
+   
+    colorInput.addEventListener('input', () =>{
+
+        var c = document.getElementById("BezierCurveCanvas");
+        var context = c.getContext("2d");
         context.moveTo(353, 393);
         context.bezierCurveTo(586, 436, 1044, 198, 1905, 18);
         context.bezierCurveTo(617, 530, 348, 777, 114, 644);
         context.bezierCurveTo(-126, 464, 183, 123, 290, 8);
         context.bezierCurveTo(181, 197, 202, 359, 353, 393);
-        context.fillStyle = "#FF2400";
-        context.strokeStyle = "#FF2400";
+        context.lineTo(353, 393);
+        context.fill();  
         context.stroke();
-        context.fill();
+        context.strokeStyle = colorInput.value;
+        context.fillStyle = colorInput.value;
+    });

@@ -1,10 +1,74 @@
-
 body{
     padding: 0;
     margin: 0;
     background-color: #A2C4E0;
-    zoom: 0.7;
+    height:100vh;
+    cursor: none;
 }
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+
+
+
 .obroba{
     height: 50em;
     width: 40em;
@@ -40,6 +104,7 @@ input[id="moznost1"]{
     pointer-events: none;
     z-index: 0;
 }
+
 #powerbtn{
     border:none;
     border-radius: 50%;
@@ -48,7 +113,7 @@ input[id="moznost1"]{
     position:absolute;
     top:10.2em;
     right:1.7em;
-    cursor: pointer;
+    cursor: none;
     background-color: #C1C2AD;
     box-shadow: 0 0 0 0.2em #888888;
 
@@ -205,7 +270,7 @@ input[id="gumb1"]{
     top:4.5em;
     right:1.8em;
     outline:none;
-    cursor:pointer;
+    cursor:none;
     box-shadow: .15em .3em #888888;
 }
 input[id="gumb2"]{
@@ -219,22 +284,45 @@ input[id="gumb2"]{
     top:9.8em;
     right:1.8em;
     outline:none;
-    cursor:pointer;
+    cursor:none;
     box-shadow: .15em .3em #888888;
 }
 input[id="gumb3"]{
     -webkit-appearance: none;
     background-color: #C1C2AD;
     height:3.5em;
-    width:8em;
+    width:10em;
     border-radius:1em;
     border:none;
     position:absolute;
     top: 15em;
-    right:1.8em;
+    left: 1em;
     outline:none;
-    cursor:pointer;
+    cursor:none;
     box-shadow: .15em .3em #888888;
+}
+#colorpicker{
+    -webkit-appearance: none;
+    padding:0;
+    z-index: 1;
+    width: 2.5em;
+    height: 2.5em;
+    position: absolute;
+    bottom: 2.35em;
+    right: 1.7em;
+    border:none;
+    cursor: none;
+    outline: none;
+    background-color: #C1C2AD;
+}
+#bezierslika{
+    position: absolute;
+    top: 13.3em;
+    left: 1.91em;
+    color:#696969;
+    font-weight:bold;
+    font-family: cursive;
+    cursor:none;
 }
 #zapri{
     -webkit-appearance: none;
@@ -242,12 +330,12 @@ input[id="gumb3"]{
     height:3em;
     width:3em;
     border-radius:50%;
-    border:none;
-    position:absolute;
+    border: none;
+    position: absolute;
     left: 4.5em;
     top: 0.5em;
-    outline:none;
-	cursor:pointer;
+    outline: none;
+	cursor: none;
     box-shadow: 0 0 0 0.2em #888888;
 }
 #powerbutton{
@@ -265,7 +353,7 @@ input[id="gumb3"]{
     color:#696969;
     font-weight:bold;
     font-family: cursive;
-    cursor:pointer;
+    cursor:none;
 }
 #svgslika{
     position: absolute;
@@ -274,7 +362,7 @@ input[id="gumb3"]{
     color:#696969;
     font-weight:bold;
     font-family: cursive;
-    cursor:pointer;
+    cursor:none;
 }
 #svgslika1{
     position: absolute;
@@ -291,21 +379,14 @@ input[id="gumb3"]{
     right:-0.7em;
     pointer-events: none;
 }
-#bezierslika{
-    position: absolute;
-    top: 13.3em;
-    left: 3.2em;
-    color:#696969;
-    font-weight:bold;
-    font-family: cursive;
-    cursor:pointer;
-}
+
 #BezierCurveCanvas{
     position:absolute;
     top:-15em;
     right:-1.2em;
     height:30%;
     pointer-events: none;
+    z-index: 3;
 }
 .swal2-popup {
     font-family:cursive;
@@ -316,10 +397,11 @@ input[id="gumb3"]{
     width: 4em;
     border-radius: 50%;
     border:none;
-    cursor: pointer;
+    cursor: none;
     bottom: 1em;
     left: 1em;
     background-color:#caeee5;
+
 }
 #ex_mark{
     width: 4em;
