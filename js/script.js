@@ -23,6 +23,7 @@ document.addEventListener('click', () => {
             html: "Open the TV first", 
             confirmButtonColor: '#A2C4E0', 
             confirmButtonText: "OK", 
+            timer: 3000,
           });
     }
     else{
@@ -121,6 +122,7 @@ function toggleImage(){
     title: 'Credits by Dilan Mužič',
     confirmButtonColor: '#A2C4E0', 
     confirmButtonText: "CLOSE", 
+    timer: 3000,
     showClass: {
       popup: 'animate__animated animate__fadeInLeft'
     },
