@@ -1,15 +1,4 @@
-const cursor = document.querySelector('.cursor');
-document.addEventListener('mousemove', e => {
-    cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
-})
 
-document.addEventListener('click', () => {
-    cursor.classList.add("expand");
-
-    setTimeout(() => {
-        cursor.classList.remove("expand");
-    }, 500)
-})
 
     function toggleImage1(){
   document.getElementById('moznost1').checked=!document.getElementById('moznost1').checked
@@ -153,25 +142,33 @@ function toggleonoff(){
              animationOff();}
 
 }
-
+var signal = document.getElementById('cursor');
+    signal.style.visibility="hidden";
+    var signal1 = document.getElementById('cursor1');
+    signal1.style.visibility="hidden";
 function animationOn(){
 
+    
   
     document.getElementById('anim1').classList.add('inner');
     setTimeout(function(){
     document.getElementById('anim1').classList.remove('inner');  
     
-    }, 900);}
+    }, 900);signal.style.visibility="hidden";
+    signal1.style.visibility="hidden";}
 
 
 function animationOff(){
+    
+
 
     document.getElementById('moznost1').classList.remove('backgroundOn');
     document.getElementById('anim1').classList.add('innerrev');
     setTimeout(function(){
     document.getElementById('anim1').classList.remove('innerrev');
      document.getElementById('moznost1').classList.add('backgroundOn');
-    }, 700);}
+    }, 700);signal.style.visibility="visible";
+    signal1.style.visibility="visible";}
 
 
    

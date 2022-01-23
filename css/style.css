@@ -3,7 +3,6 @@ body{
     margin: 0;
     background-color: #A2C4E0;
     height:100vh;
-    cursor: none;
 }
 .cursor {
     width: 20px;
@@ -15,7 +14,12 @@ body{
     transition-timing-function: ease-out;
     animation: cursorAnim .5s infinite alternate;
     pointer-events: none;
-    z-index: 5;
+    top:2.9em;
+    left:10.6em;
+    z-index: 10;
+}
+.two{
+    left:17.9em;
 }
 
 .cursor::after {
@@ -62,12 +66,6 @@ body{
     }
 }
 
-.expand {
-    animation: cursorAnim3 .5s forwards;
-    border: 1px solid red;
-}
-
-
 
 .obroba{
     height: 50em;
@@ -113,7 +111,8 @@ input[id="moznost1"]{
     position:absolute;
     top:10.2em;
     right:1.7em;
-    cursor: none;
+    cursor: pointer;
+
     background-color: #C1C2AD;
     box-shadow: 0 0 0 0.2em #888888;
 
@@ -270,8 +269,9 @@ input[id="gumb1"]{
     top:4.5em;
     right:1.8em;
     outline:none;
-    cursor:none;
     box-shadow: .15em .3em #888888;
+    cursor: pointer;
+
 }
 input[id="gumb2"]{
     -webkit-appearance: none;
@@ -284,45 +284,49 @@ input[id="gumb2"]{
     top:9.8em;
     right:1.8em;
     outline:none;
-    cursor:none;
     box-shadow: .15em .3em #888888;
+    cursor: pointer;
+
 }
 input[id="gumb3"]{
     -webkit-appearance: none;
     background-color: #C1C2AD;
     height:3.5em;
-    width:10em;
+    width:8em;
     border-radius:1em;
     border:none;
     position:absolute;
     top: 15em;
-    left: 1em;
+    left: 2.2em;
     outline:none;
-    cursor:none;
     box-shadow: .15em .3em #888888;
+    cursor: pointer;
+
 }
 #colorpicker{
     -webkit-appearance: none;
-    padding:0;
     z-index: 1;
-    width: 2.5em;
-    height: 2.5em;
+    padding: 0;
+    margin: 0;
+    height: 1.3em;
+    width: 4.5em;
     position: absolute;
-    bottom: 2.35em;
-    right: 1.7em;
+    bottom: 2em;
+    right: 3.5em;
     border:none;
-    cursor: none;
+    cursor: pointer;
     outline: none;
     background-color: #C1C2AD;
 }
 #bezierslika{
     position: absolute;
-    top: 13.3em;
-    left: 1.91em;
+    top: 12.7em;
+    left: 3.3em;
     color:#696969;
     font-weight:bold;
     font-family: cursive;
     cursor:none;
+    cursor: pointer;
 }
 #zapri{
     -webkit-appearance: none;
@@ -335,8 +339,9 @@ input[id="gumb3"]{
     left: 4.5em;
     top: 0.5em;
     outline: none;
-	cursor: none;
     box-shadow: 0 0 0 0.2em #888888;
+    cursor: pointer;
+
 }
 #powerbutton{
 	position:absolute;
@@ -344,7 +349,8 @@ input[id="gumb3"]{
 	height:2.8em;
 	left:3.59em;
 	top:0.34em;
-	pointer-events: none;
+    pointer-events: none;
+
 }
 #pngslika{
     position: absolute;
@@ -353,7 +359,7 @@ input[id="gumb3"]{
     color:#696969;
     font-weight:bold;
     font-family: cursive;
-    cursor:none;
+    cursor: pointer;
 }
 #svgslika{
     position: absolute;
@@ -362,7 +368,7 @@ input[id="gumb3"]{
     color:#696969;
     font-weight:bold;
     font-family: cursive;
-    cursor:none;
+    cursor: pointer;
 }
 #svgslika1{
     position: absolute;
@@ -397,7 +403,7 @@ input[id="gumb3"]{
     width: 4em;
     border-radius: 50%;
     border:none;
-    cursor: none;
+    cursor: pointer;
     bottom: 1em;
     left: 1em;
     background-color:#caeee5;
@@ -479,3 +485,4 @@ input[id="gumb3"]{
       background: white;
     }
   }
+ 
