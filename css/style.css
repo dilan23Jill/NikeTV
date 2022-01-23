@@ -1,3 +1,7 @@
+html{
+    cursor: url('../images/cursor.png'), auto;
+
+}
 body{
     padding: 0;
     margin: 0;
@@ -111,7 +115,7 @@ input[id="moznost1"]{
     position:absolute;
     top:10.2em;
     right:1.7em;
-    cursor: pointer;
+    cursor: url('../images/cursor.png'), auto;
 
     background-color: #C1C2AD;
     box-shadow: 0 0 0 0.2em #888888;
@@ -270,7 +274,7 @@ input[id="gumb1"]{
     right:1.8em;
     outline:none;
     box-shadow: .15em .3em #888888;
-    cursor: pointer;
+    cursor: url('../images/cursor.png'), auto;
 
 }
 input[id="gumb2"]{
@@ -285,7 +289,7 @@ input[id="gumb2"]{
     right:1.8em;
     outline:none;
     box-shadow: .15em .3em #888888;
-    cursor: pointer;
+    cursor: url('../images/cursor.png'), auto;
 
 }
 input[id="gumb3"]{
@@ -300,7 +304,7 @@ input[id="gumb3"]{
     left: 2.2em;
     outline:none;
     box-shadow: .15em .3em #888888;
-    cursor: pointer;
+    cursor: url('../images/cursor.png'), auto;
 
 }
 #colorpicker{
@@ -314,7 +318,7 @@ input[id="gumb3"]{
     bottom: 2em;
     right: 3.5em;
     border:none;
-    cursor: pointer;
+    cursor: url('../images/cursor.png'), auto;
     outline: none;
     background-color: #C1C2AD;
 }
@@ -326,7 +330,7 @@ input[id="gumb3"]{
     font-weight:bold;
     font-family: cursive;
     cursor:none;
-    cursor: pointer;
+    cursor: url('../images/cursor.png'), auto;
 }
 #zapri{
     -webkit-appearance: none;
@@ -340,7 +344,7 @@ input[id="gumb3"]{
     top: 0.5em;
     outline: none;
     box-shadow: 0 0 0 0.2em #888888;
-    cursor: pointer;
+    cursor: url('../images/cursor.png'), auto;
 
 }
 #powerbutton{
@@ -359,7 +363,7 @@ input[id="gumb3"]{
     color:#696969;
     font-weight:bold;
     font-family: cursive;
-    cursor: pointer;
+    cursor: url('../images/cursor.png'), auto;
 }
 #svgslika{
     position: absolute;
@@ -368,7 +372,7 @@ input[id="gumb3"]{
     color:#696969;
     font-weight:bold;
     font-family: cursive;
-    cursor: pointer;
+    cursor: url('../images/cursor.png'), auto;
 }
 #svgslika1{
     position: absolute;
@@ -403,7 +407,7 @@ input[id="gumb3"]{
     width: 4em;
     border-radius: 50%;
     border:none;
-    cursor: pointer;
+    cursor: url('../images/cursor.png'), auto;
     bottom: 1em;
     left: 1em;
     background-color:#caeee5;
